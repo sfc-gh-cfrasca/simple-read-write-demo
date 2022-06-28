@@ -56,17 +56,17 @@ elif 'first_name' in st.session_state and 'last_name'  in st.session_state:
 
     if step_2_submit:
         
-        snowcreds = json.load(open("/tmp/snowflake/creds.json", "r"))
+#         snowcreds = json.load(open("/tmp/snowflake/creds.json", "r"))
 #         snowcreds["database"] = "citibike"
 #         snowcreds["schema"] = "demo"
-        conn = snowflake.connector.connect(**snowcreds)
-#         conn = connectToSnowflake({
-#             "USER": st.secrets['USER'], 
-#             "PASSWORD": st.secrets['PASSWORD'], 
-#             "ACCOUNT": st.secrets['ACCOUNT'],
-#             "ROLE": st.secrets['ROLE'],
-#             "WAREHOUSE": st.secrets['WAREHOUSE'],
-#         })
+#         conn = snowflake.connector.connect(**snowcreds)
+        conn = connectToSnowflake({
+            "USER": st.secrets['USER'], 
+            "PASSWORD": st.secrets['PASSWORD'], 
+            "ACCOUNT": st.secrets['ACCOUNT'],
+            "ROLE": st.secrets['ROLE'],
+            "WAREHOUSE": st.secrets['WAREHOUSE'],
+        })
 
         first_name = st.session_state['first_name']
         last_name = st.session_state['last_name']
