@@ -61,11 +61,11 @@ elif 'first_name' in st.session_state and 'last_name'  in st.session_state:
 #         snowcreds["schema"] = "demo"
         conn = snowflake.connector.connect(**snowcreds)
 #         conn = connectToSnowflake({
-#             "USER": USER, 
-#             "PASSWORD": PASSWORD, 
-#             "ACCOUNT": ACCOUNT,
-#             "ROLE": ROLE,
-#             "WAREHOUSE": WAREHOUSE,
+#             "USER": st.secrets['USER'], 
+#             "PASSWORD": st.secrets['PASSWORD'], 
+#             "ACCOUNT": st.secrets['ACCOUNT'],
+#             "ROLE": st.secrets['ROLE'],
+#             "WAREHOUSE": st.secrets['WAREHOUSE'],
 #         })
 
         first_name = st.session_state['first_name']
