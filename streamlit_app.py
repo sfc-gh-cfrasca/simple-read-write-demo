@@ -48,8 +48,8 @@ elif 'first_name' in st.session_state and 'last_name'  in st.session_state:
             satisfaction_mgr = st.slider('My manager, Oscar Nunez, is effective.', 1, 10, key="satisfaction-mgr")
         elif department=="HR":
             satisfaction_mgr = st.slider('My manager, Toby Flenderson, is effective.', 1, 10, key="satisfaction-mgr")
-        st.write("\n")
-        st.image("CrimeAid.jpg",width=500)
+#         st.write("\n")
+#         st.image("CrimeAid.jpg",width=500)
         satisfaction_events = st.slider('I enjoy company events, such as the Dundies and Crime Aid.', 1, 10, key="satisfaction-events")
         satisfaction_office = st.slider('The facilities are clean and functional.', 1, 10, key="satisfaction-office")
         step_2_submit = st.form_submit_button("Submit")
